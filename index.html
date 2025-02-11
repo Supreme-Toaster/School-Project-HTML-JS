@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html id="htmlID">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="A website dedicated to the countries of Scandinavia">
+    <meta name="keywords" content="Scandinavia, Denmark, Sweden, Norway">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Peter Gulin">
+
+    <title>Skandinavien</title>
+
+    <link rel="icon" type="image/icon" href="resources/images/scandinavia_favicon.webp">
+    <link rel="stylesheet" href="resources/css/main.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div>
+            <button onclick="showSideNav()" id="menuButton">☰</button>
+            <img alt="Skandinavien" src="resources/images/globe_logo.webp" alt="Logo">
+            <a href="homepage.html" target="content" style="text-decoration:none"><h1>Skandinavien</h1></a>
+        </div>
+
+    </header>
+
+    <nav class="sidenav" id="sidenav">
+        <button onclick="showSideNav()">⛌</button>
+
+        <a href="homepage.html" target="content" onclick="showSideNav()">Hem</a>
+
+        <a href="denmark.html" target="content" onclick="showSideNav()">Danmark</a>
+
+        <a href="norway.html" target="content" onclick="showSideNav()">Norge</a>
+
+        <a href="sweden.html" target="content" onclick="showSideNav()">Sverige</a>
+
+        <a href="about.html" target="content" onclick="showSideNav()">Om</a>
+
+    </nav>
+    <iframe src="homepage.html" id="iframeContentID" name="content" class="iframe" scrolling="no"
+        onload="windowIframeSizing()"></iframe>
+
+
+    <footer class="footer">Skapare: Peter Gulin</footer>
+
+    <script src="resources/js/main.js" async defer></script>
+    
+
+</body>
+
+</html>

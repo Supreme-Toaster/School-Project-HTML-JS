@@ -1,0 +1,149 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #8bd7fb;
+    height: 100%;
+}
+
+.header {
+    background: #1abc9c;
+    border-bottom: solid black 2px;
+    height: 50px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.header button {
+    background-color: #587c75;
+    border: solid black 2px;
+    border-radius: 10px;
+    color: white;
+    display: none;
+    font-size: 30px;
+    left: 20px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    position: absolute;
+    text-shadow: black 1px 1px;
+    top: 7.5px;
+}
+
+.header div {
+    align-items: end;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.header h1 {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+}
+
+.header img {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 50px;
+}
+
+.footer {
+    background: #1abc9c;
+    border-top: solid black 2px;
+    font-size: 15px;
+    height: 20px;
+    margin-top: -4px;
+    text-align: center;
+    text-shadow: cyan 1px 1px;
+}
+
+.iframe {
+    height: 100%;
+    width: 100%;
+}
+
+.responsive-iframe {
+    border: none;
+    width: 100%;
+}
+
+.sidenav {
+    background-color: #18a78a;
+    border-bottom: solid black 2px;
+    text-align: center;
+    text-shadow: black 1px 1px;
+}
+
+.sidenav a {
+    color: #818181;
+    font-size: 20px;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+    text-decoration: underline;
+}
+
+.sidenav button {
+    visibility: hidden;
+}
+
+
+@media (max-width:512px) {
+    .header button {
+        box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+        display: block;
+    }
+
+    .header div {
+        margin-left: 50px;
+    }
+
+    .sidenav {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .sidenav.open {
+        border-right: solid black 2px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        left: -100px;
+        text-align: left;
+        top: 61px;
+        transform: translateX(90px);
+        transition: transform 400ms ease-in-out;
+        visibility: visible;
+        width: 110px;
+    }
+
+    .sidenav.close {
+        transform: translateX(-90px);
+        transition: transform 400ms ease-in-out;
+        visibility: visible;
+    }
+
+    .sidenav.close button {
+        visibility: hidden;
+    }
+
+    .sidenav.open button {
+        background-color: #587c75;
+        border: solid black 2px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+        color: white;
+        font-size: 22px;
+        padding: 0px 3px 0px 3px;
+        position: absolute;
+        right: -40px;
+        text-shadow: black 1px 1px;
+        top: 35%;
+        visibility: visible;
+    }
+}
