@@ -2,17 +2,6 @@
 //Update the SRC of the iframe to the appropriate file
 function showSideNav(page) {
 
-    if (typeof page !== 'undefined')
-    {
-        document.getElementById('iframeContentID').src = page +'.html';
-    }
-
-    if (page == 'homepage')
-    {
-        return;
-    }
-
-
     if (window.innerWidth < 512) {
         let menuButton = document.getElementById('menuButton');
 
@@ -32,6 +21,10 @@ function showSideNav(page) {
             }, 300);
         }
     }
+}
+
+function updateIframeSrc(page){
+    document.getElementById('iframeContentID').src = page +'.html';
 }
 
 //Highlight the active page of Iframe

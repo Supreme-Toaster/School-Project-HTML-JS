@@ -31,6 +31,11 @@ function hoverCountry(country) {
 
 }
 
+//Updates the iframe SRC of parent page
+function updateIframeSrc(page){
+    window.parent.updateIframeSrc(page);
+}
+
 //Hiding the overlaying text/image and changing its index to not interfere with click events
 function deHoverCountries() {
 

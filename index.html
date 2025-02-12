@@ -22,7 +22,7 @@
         <div>
             <button onclick="showSideNav()" id="menuButton">☰</button>
             <img alt="Skandinavien" src="resources/images/globe_logo.webp" alt="Logo">
-            <a href="homepage.html" target="content" style="text-decoration:none" onclick="showSideNav('homepage')"><h1>Skandinavien</h1></a>
+            <a href="homepage.html" target="content" style="text-decoration:none" onclick="updateIframeSrc('homepage')"><h1>Skandinavien</h1></a>
         </div>
 
     </header>
@@ -30,15 +30,15 @@
     <nav class="sidenav" id="sidenav">
         <button onclick="showSideNav()">⛌</button>
 
-        <a href="homepage.html" target="content" onclick="showSideNav('homepage')" id="homepage">Hem</a>
+        <a href="homepage.html" target="content" onclick="showSideNav();updateIframeSrc('homepage');" id="homepage">Hem</a>
 
-        <a href="denmark.html" target="content" onclick="showSideNav('denmark')" id="denmark">Danmark</a>
+        <a href="denmark.html" target="content" onclick="showSideNav();updateIframeSrc('denmark');" id="denmark">Danmark</a>
 
-        <a href="norway.html" target="content" onclick="showSideNav('norway')" id="norway">Norge</a>
+        <a href="norway.html" target="content" onclick="showSideNav();updateIframeSrc('norway');" id="norway">Norge</a>
 
-        <a href="sweden.html" target="content" onclick="showSideNav('sweden')" id="sweden">Sverige</a>
+        <a href="sweden.html" target="content" onclick="showSideNav();updateIframeSrc('sweden');" id="sweden">Sverige</a>
 
-        <a href="about.html" target="content" onclick="showSideNav('about')" id="about">Om</a>
+        <a href="about.html" target="content" onclick="showSideNav();updateIframeSrc('about');" id="about">Om</a>
 
     </nav>
     <iframe src="homepage.html" id="iframeContentID" name="content" class="iframe" scrolling="no"
