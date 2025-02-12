@@ -1,8 +1,20 @@
-//Open and close sidebar, switches between two css classes with a delay to prevent visual bugs
-function showSideNav() {
+//Open and close sidebar, switches between two css classes with a delay to prevent visual bugs.
+//Update the SRC of the iframe to the appropriate file
+function showSideNav(page) {
+
+    if (typeof page !== 'undefined')
+    {
+        document.getElementById('iframeContentID').src = page +'.html';
+    }
+
+    if (page == 'homepage')
+    {
+        return;
+    }
+
 
     if (window.innerWidth < 512) {
-        var menuButton = document.getElementById('menuButton');
+        let menuButton = document.getElementById('menuButton');
 
         if (menuButton.style.visibility === "" || menuButton.style.visibility === "visible") {
             document.getElementById('sidenav').classList.toggle('open');
@@ -22,17 +34,36 @@ function showSideNav() {
     }
 }
 
+//Highlight the active page of Iframe
+function activePage(){
+
+    let iframe = document.getElementById('iframeContentID').src;
+    let filename = iframe.substring(iframe.lastIndexOf('/') + 1).replace(/\.html$/, '');
+
+
+    let links = document.querySelectorAll('a[id]');
+
+    links.forEach(link => {
+        if (link.id == filename) {
+            link.style.filter = 'brightness(2)';
+        }
+        else {
+            link.style.filter = 'brightness(1)';
+        }
+
+    })
+}
 
 // Getting the total height of loaded iFrame and changing the size to fit screen
 function windowIframeSizing() {
 
-    var iframe = document.getElementById('iframeContentID');
+    let iframe = document.getElementById('iframeContentID');
 
     iframe.style.height = 0 + 'px';
-    
-    var body = iframe.contentWindow.document.body;
-    var html = iframe.contentWindow.document.documentElement;
-    var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+    let body = iframe.contentWindow.document.body;
+    let html = iframe.contentWindow.document.documentElement;
+    let height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
 
     iframe.style.height = height + 'px';
 

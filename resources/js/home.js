@@ -42,7 +42,7 @@ function deHoverCountries() {
 
     countriesOverlay.style.display='none';
 
-    //countriesOverlay.style.zIndex = -1; //Not needed if we remove its render entierly with "diplay='none*"
+    //countriesOverlay.style.zIndex = -1; //Not needed if we remove its render entierly with "display='none*"
     
     mainCountires.style.filter = '';
 }
