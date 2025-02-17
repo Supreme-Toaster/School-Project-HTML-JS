@@ -61,4 +61,4 @@ function windowIframeSizing() {
     iframe.style.height = height + 'px';
 
 }
-//window.addEventListener('resize', windowIframeSizing);
+window.addEventListener('resize', windowIframeSizing);
