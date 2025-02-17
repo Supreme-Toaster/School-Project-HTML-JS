@@ -4,6 +4,7 @@ function hoverCountry(country) {
     let countriesOverlay = document.getElementById('countriesOverlay');
     let mainCountires = document.getElementById('mainCountries');
     let divOverlay = document.getElementById('divOverlay');
+    
     countriesOverlay.style.display='inline';
 
     switch (country) {

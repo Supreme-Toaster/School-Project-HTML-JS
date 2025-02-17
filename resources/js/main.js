@@ -1,11 +1,10 @@
 //Open and close sidebar, switches between two css classes with a delay to prevent visual bugs.
-//Update the SRC of the iframe to the appropriate file
-function showSideNav(page) {
+function showSideNav() {
 
     if (window.innerWidth < 512) {
         let menuButton = document.getElementById('menuButton');
 
-        if (menuButton.style.visibility === "" || menuButton.style.visibility === "visible") {
+        if (menuButton.style.visibility == "" || menuButton.style.visibility == "visible") {
             document.getElementById('sidenav').classList.toggle('open');
             menuButton.style.visibility = "hidden";
 
@@ -23,6 +22,7 @@ function showSideNav(page) {
     }
 }
 
+//Update the SRC of the iframe to the appropriate file
 function updateIframeSrc(page){
     document.getElementById('iframeContentID').src = page +'.html';
 }
@@ -61,4 +61,4 @@ function windowIframeSizing() {
     iframe.style.height = height + 'px';
 
 }
-window.addEventListener('resize', windowIframeSizing);
+//window.addEventListener('resize', windowIframeSizing);
